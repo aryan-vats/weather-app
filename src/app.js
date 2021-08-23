@@ -70,13 +70,6 @@ app.get("/weather",(req,res)=>{
         })
 
     })
-
-
-    // res.send({
-    //     forecast: "Thunderstorm",
-    //     location: "Delhi",
-    //     address: req.query.address
-    // })
 })
 app.get("/help/*",(req,res)=>{
     res.render("error",{
