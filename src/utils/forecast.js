@@ -10,7 +10,7 @@ const forecast= (longitude,latitude,callback)=>{
         }else if(body.error){
             callback("Invald coordinates",undefined)
         }else{
-            callback(undefined,"Overcast: "+body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degrees.Also, the city has a visibility of '+body.current.visibility+" metres.")
+            callback(undefined,body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degrees out. The humidity is '+body.current.humidity+"%.")
         }
     })
 }
